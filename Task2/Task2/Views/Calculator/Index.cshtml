@@ -1,0 +1,24 @@
+﻿@model Task2.Value.ClassValue
+
+@{
+    ViewData["Title"] = "Калькулятор";
+    Layout = "_Layout";
+}
+
+<div align="center">
+    <form id="calculator" asp-controller="Calculator" asp-action="calculate" method="post">
+    <h4>значение</h4>
+        <br>
+        <input type="text" asp-for="Value">
+    <br>
+    <br>
+        <button type="submit" id="operation" name="operation" value="degree">возведение в степень</button>
+        <input type="number" id="degreeValue" name="degreeValue">
+        <br>
+    <br>
+        <button type="submit" id="operation" name="operation" value="root">извлечение корня по основанию</button>
+        <br>
+        <br>
+        <button type="submit" id="operation" name="operation" value="decision">Вычислить</button>
+    </form>
+</div>
